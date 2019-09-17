@@ -1,0 +1,56 @@
+{
+	"name": "html2seed",
+	"displayName": "html2seed",
+	"description": "HTML to Seed",
+	"publisher": "langbamit",
+	"version": "0.0.1",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/langbamit/html2seed.git"
+	},
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.html2seed"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.html2seed",
+				"title": "HTML: Convert to Seed"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"test-compile": "tsc -p ./",
+		"pretest": "yarn run test-compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"dependencies": {
+		"htmlparser2": "^3.10.1"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/htmlparser2": "^3.10.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"@types/vscode": "^1.0.0",
+		"glob": "^7.1.4",
+		"mocha": "^6.1.4",
+		"ts-loader": "^6.1.0",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode-test": "^1.2.0",
+		"webpack": "^4.40.2",
+		"webpack-cli": "^3.3.8"
+	}
+}
